@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halftone Mo — Risograph &amp; Duotone Poster Studio</title>
+<meta name="description" content="Turn any image into risograph-style halftone poster art. Free, open-source, runs entirely in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="mark" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </span>
+    <div>
+      <h1>Halftone Mo</h1>
+      <p class="tagline">Risograph &amp; duotone poster studio</p>
+    </div>
+  </div>
+  <div class="badges">
+    <span class="badge">v1.0</span>
+    <span class="badge">MIT</span>
+    <span class="badge">100% offline</span>
+  </div>
+</header>
+
+<main class="layout">
+
+  <aside class="panel" aria-label="Controls">
+
+    <section class="group">
+      <h2>Source</h2>
+      <button id="uploadBtn" class="btn">Upload image</button>
+      <input type="file" id="fileInput" accept="image/*" hidden>
+      <p class="hint">…or drop a file anywhere, or start from a sample:</p>
+      <div class="thumbs" id="thumbs"></div>
+    </section>
+
+    <section class="group">
+      <h2>Halftone</h2>
+      <label class="row">
+        <span>Dot size <em id="dotVal">9px</em></span>
+        <input type="range" id="dotSize" min="2" max="24" step="1" value="9">
+      </label>
+      <label class="row">
+        <span>Screen angle <em id="angleVal">45°</em></span>
+        <input type="range" id="angle" min="0" max="90" step="1" value="45">
+      </label>
+      <p class="hint">Ink A prints at 15°. Ink B uses this angle — separation avoids moiré, like real riso screens.</p>
+    </section>
+
+    <section class="group">
+      <h2>Inks</h2>
+      <div class="inks">
+        <label class="ink">
+          <input type="color" id="inkA" value="#ff48b0">
+          <span>Ink A <small>shadows</small></span>
+        </label>
+        <label class="ink">
+          <input type="color" id="inkB" value="#00a9a5">
+          <span>Ink B <small>highlights</small></span>
+        </label>
+        <button id="swapBtn" class="btn small" title="Swap the two inks">⇄</button>
+      </div>
+      <p class="hint">Duotone presets:</p>
+      <div class="presets" id="presets"></div>
+    </section>
+
+    <section class="group">
+      <h2>Paper</h2>
+      <div class="papers" id="papers"></div>
+      <label class="check">
+        <input type="checkbox" id="grain" checked>
+        <span>Paper grain &amp; texture</span>
+      </label>
+    </section>
+
+    <section class="group">
+      <h2>Adjust</h2>
+      <label class="row">
+        <span>Brightness <em id="brightVal">0</em></span>
+        <input type="range" id="brightness" min="-100" max="100" step="1" value="0">
+      </label>
+      <label class="row">
+        <span>Contrast <em id="contrastVal">0</em></span>
+        <input type="range" id="contrast" min="-100" max="100" step="1" value="0">
+      </label>
+    </section>
+
+    <button id="exportBtn" class="btn primary">Export PNG</button>
+    <p class="hint center">Exports at high resolution (3000px long edge).</p>
+
+  </aside>
+
+  <section class="stage" id="stage" aria-label="Preview">
+    <canvas id="preview" width="760" height="760"></canvas>
+    <div class="drop-hint" id="dropHint">Drop image to load</div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Halftone Mo — two inks, one screen at a time. Your images never leave this page.</p>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+<pre id="selftest" class="selftest" hidden></pre>
+
+<script src="app.js"></script>
+</body>
+</html>
