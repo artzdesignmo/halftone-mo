@@ -4,6 +4,8 @@
 
 Turn any image into risograph-style halftone poster art — right in your browser. No uploads, no servers, no sign-up.
 
+**[▶ Try it live](https://artzdesignmo.github.io/halftone-mo/)**
+
 ![Halftone Mo demo](IMG_6944.png)
 
 ## Features
