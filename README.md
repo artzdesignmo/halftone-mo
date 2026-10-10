@@ -1,8 +1,8 @@
 # Halftone Mo
 
-Turn any image into risograph-style halftone poster art — right in your browser. No uploads, no servers, no sign-up.
+![License: MIT](https://img.shields.io/badge/license-MIT-green) ![Offline](https://img.shields.io/badge/offline-100%25-blue) ![No dependencies](https://img.shields.io/badge/dependencies-zero-orange)
 
-![Halftone Mo demo](demo.png)
+Turn any image into risograph-style halftone poster art — right in your browser. No uploads, no servers, no sign-up.
 
 ## Features
 
