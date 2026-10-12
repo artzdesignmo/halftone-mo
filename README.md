@@ -37,3 +37,9 @@ Tip: every control is also a URL parameter, so settings are shareable, e.g.
 ## License
 
 MIT — see [LICENSE](LICENSE). Have fun, make posters.
+
+## Support
+
+If Halftone Mo is useful to you, you can support its development with a coffee:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/whynotartmoney)
